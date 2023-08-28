@@ -1,0 +1,246 @@
+import random
+
+todas_las_preguntas = [
+
+        {
+            "pregunta": "¿Cuál es la capital de Turquia?",
+            "opciones": ["a) Kiev", "b) Estambul", "c) Ankara"],
+            "respuesta_correcta": "b"
+        },
+        {
+            "pregunta": "¿Cuál es el símbolo químico del oxígeno?",
+            "opciones": ["a) Ox", "b) O2", "c) O"],
+            "respuesta_correcta": "c"
+        },
+        {
+            "pregunta": "¿Quién escribió la obra 'Don Quijote de la Mancha'?",
+            "opciones": ["a) Gabriel García Márquez", "b) Miguel de Cervantes", "c) Pablo Neruda"],
+            "respuesta_correcta": "b"
+        },
+        {
+            "pregunta": "¿Cuál es el planeta más grande de nuestro sistema solar?",
+            "opciones": ["a) Tierra", "b) Marte", "c) Júpiter"],
+            "respuesta_correcta": "c"
+        },
+        {
+            "pregunta": "¿Cuál es la montaña más alta del mundo?",
+            "opciones": ["a) Kilimanjaro", "b) Everest", "c) Aconcagua"],
+            "respuesta_correcta": "b"
+        },
+        {
+            "pregunta": "¿Cuál es el río más largo del mundo?",
+            "opciones": ["a) Amazonas", "b) Nilo", "c) Yangtsé"],
+            "respuesta_correcta": "b"
+        },
+        {
+            "pregunta": "¿En qué año ocurrió la Revolución Francesa?",
+            "opciones": ["a) 1789", "b) 1804", "c) 1832"],
+            "respuesta_correcta": "a"
+        },
+        {
+            "pregunta": "¿Cuál es el metal más abundante en la corteza terrestre?",
+            "opciones": ["a) Hierro", "b) Aluminio", "c) Cobre"],
+            "respuesta_correcta": "b"
+        },
+        {
+            "pregunta": "¿Cuál es la capital de Australia?",
+            "opciones": ["a) Sídney", "b) Melbourne", "c) Canberra"],
+            "respuesta_correcta": "c"
+        },
+        {
+            "pregunta": "¿Qué famosa pintura fue creada por Leonardo da Vinci?",
+            "opciones": ["a) El Grito", "b) La Noche Estrellada", "c) La Mona Lisa"],
+            "respuesta_correcta": "c"
+        },
+        {
+            "pregunta": "¿Cuál es el océano más grande del mundo?",
+            "opciones": ["a) Océano Atlántico", "b) Océano Pacífico", "c) Océano Índico"],
+            "respuesta_correcta": "b"
+        },
+        {
+            "pregunta": "¿Qué famoso científico desarrolló la teoría de la relatividad?",
+            "opciones": ["a) Isaac Newton", "b) Albert Einstein", "c) Galileo Galilei"],
+            "respuesta_correcta": "b"
+        },
+        {
+            "pregunta": "¿Cuál es el metal más liviano?",
+            "opciones": ["a) Aluminio", "b) Titanio", "c) Plomo"],
+            "respuesta_correcta": "a"
+        },
+        {
+            "pregunta": "¿Cuál es el planeta más cercano al Sol?",
+            "opciones": ["a) Venus", "b) Mercurio", "c) Marte"],
+            "respuesta_correcta": "b"
+        },
+        {
+            "pregunta": "¿Quién escribió la obra 'Romeo y Julieta'?",
+            "opciones": ["a) William Shakespeare", "b) Jane Austen", "c) Mark Twain"],
+            "respuesta_correcta": "a"
+        },
+        {
+            "pregunta": "¿Cuál es el hueso más largo del cuerpo humano?",
+            "opciones": ["a) Tibia", "b) Fémur", "c) Radio"],
+            "respuesta_correcta": "b"
+        },
+        {
+            "pregunta": "¿Cuál es el continente más poblado?",
+            "opciones": ["a) Asia", "b) África", "c) Europa"],
+            "respuesta_correcta": "a"
+        },
+        {
+            "pregunta": "¿En qué año llegó el hombre a la Luna por primera vez?",
+            "opciones": ["a) 1969", "b) 1972", "c) 1961"],
+            "respuesta_correcta": "a"
+        },
+        {
+            "pregunta": "¿Qué gas es necesario para la fotosíntesis de las plantas?",
+            "opciones": ["a) Oxígeno", "b) Nitrógeno", "c) Dióxido de carbono"],
+            "respuesta_correcta": "c"
+        },
+        {
+            "pregunta": "¿Cuál es el instrumento musical conocido como 'Rey de la selva'?",
+            "opciones": ["a) Trompeta", "b) Flauta", "c) Tambor"],
+            "respuesta_correcta": "a"
+        },
+        {
+        "pregunta": "¿Cuál es el metal más pesado?",
+        "opciones": ["a) Oro", "b) Plata", "c) Plomo"],
+        "respuesta_correcta": "c"
+    },
+    {
+        "pregunta": "¿Quién pintó 'La noche estrellada'?",
+        "opciones": ["a) Pablo Picasso", "b) Vincent van Gogh", "c) Leonardo da Vinci"],
+        "respuesta_correcta": "b"
+    },
+    {
+        "pregunta": "¿Cuál es el proceso por el cual las plantas convierten la luz en energía?",
+        "opciones": ["a) Fotosíntesis", "b) Respiración", "c) Fermentación"],
+        "respuesta_correcta": "a"
+    },
+    {
+        "pregunta": "¿Cuál es el satélite natural de la Tierra?",
+        "opciones": ["a) Luna", "b) Marte", "c) Júpiter"],
+        "respuesta_correcta": "a"
+    },
+    {
+        "pregunta": "¿Cuál es el metal utilizado para hacer pilas?",
+        "opciones": ["a) Hierro", "b) Cobre", "c) Zinc"],
+        "respuesta_correcta": "c"
+    },
+    {
+        "pregunta": "¿Cuál es el proceso por el cual el agua se convierte en vapor?",
+        "opciones": ["a) Fusión", "b) Evaporación", "c) Sublimación"],
+        "respuesta_correcta": "b"
+    },
+    {
+        "pregunta": "¿Cuál es el país más grande del mundo?",
+        "opciones": ["a) Estados Unidos", "b) Rusia", "c) China"],
+        "respuesta_correcta": "b"
+    },
+    {
+        "pregunta": "¿Quién escribió '1984'?",
+        "opciones": ["a) Aldous Huxley", "b) George Orwell", "c) Ray Bradbury"],
+        "respuesta_correcta": "b"
+    },
+    {
+        "pregunta": "¿Cuál es el planeta conocido como el 'Planeta Rojo'?",
+        "opciones": ["a) Venus", "b) Marte", "c) Júpiter"],
+        "respuesta_correcta": "b"
+    },
+    {
+        "pregunta": "¿Qué elemento químico es representado por el símbolo 'Fe'?",
+        "opciones": ["a) Hierro", "b) Fluoruro", "c) Fósforo"],
+        "respuesta_correcta": "a"
+    },
+    {
+        "pregunta": "¿Cuál es el desierto más grande del mundo?",
+        "opciones": ["a) Desierto del Sahara", "b) Desierto de Atacama", "c) Desierto de Gobi"],
+        "respuesta_correcta": "a"
+    },
+    {
+        "pregunta": "¿En qué país se encuentra la Torre Eiffel?",
+        "opciones": ["a) Italia", "b) España", "c) Francia"],
+        "respuesta_correcta": "c"
+    },
+    {
+        "pregunta": "¿Cuál es el número atómico del hidrógeno?",
+        "opciones": ["a) 1", "b) 22", "c) 3"],
+        "respuesta_correcta": "a"
+    },
+    {
+        "pregunta": "¿Cuál es el río más largo de América del Sur?",
+        "opciones": ["a) Amazonas", "b) Paraná", "c) Orinoco"],
+        "respuesta_correcta": "a"
+    },
+]
+
+preguntas_utilizadas = []
+
+def generar_preguntas():
+    preguntas_disponibles = [pregunta for pregunta in todas_las_preguntas]
+         
+    pregunta_seleccionada = random.choice(preguntas_disponibles)
+    preguntas_utilizadas.append(pregunta_seleccionada)
+    return pregunta_seleccionada
+
+
+def generar_castigos():
+    castigos = ["puente", "resbalon", "calavera"]
+    return random.choice(castigos)
+
+def lanzar_dado():
+    return random.randint(1, 6)
+
+def jugar_turno(jugador, casilla, aciertos):
+    print(f"Turno del Jugador {jugador}")
+    input("Presiona Enter para lanzar el dado...")
+    dado = lanzar_dado()
+    print(f"Has sacado un {dado}")
+    casilla += dado
+
+    if casilla >= 20:
+        print(f"¡El Jugador {jugador} ha ganado!")
+        return True, casilla, aciertos
+
+    pregunta = (generar_preguntas())
+    print(pregunta["pregunta"])
+    for opcion in pregunta["opciones"]:
+        print(opcion)
+    respuesta = input("Elige la opción correcta (a/b/c): ")
+
+    if respuesta == pregunta["respuesta_correcta"]:
+        print("¡Respuesta correcta!")
+        aciertos += 1
+        preguntas_utilizadas.remove(pregunta)
+    else:
+        castigo = generar_castigos()
+        if castigo == "puente":
+            casilla -= 3
+            print("¡Has caído en un puente y retrocedes 3 casillas!")
+        elif castigo == "resbalon":
+            casilla -= 2
+            print("¡Has resbalado y retrocedes 2 casillas!")
+        else:
+            casilla = 1
+            print("¡Has caído en una calavera y vuelves al inicio!")
+
+    print(f"Jugador {jugador}: Estás en la casilla {casilla}, Aciertos: {aciertos}")
+    return False, casilla, aciertos
+
+def main():
+    casilla_jugador1 = 1
+    casilla_jugador2 = 1
+    aciertos_jugador1 = 0
+    aciertos_jugador2 = 0
+
+    while True:
+        gano_jugador1, casilla_jugador1, aciertos_jugador1 = jugar_turno(1, casilla_jugador1, aciertos_jugador1)
+        if gano_jugador1:
+            break
+
+        gano_jugador2, casilla_jugador2, aciertos_jugador2 = jugar_turno(2, casilla_jugador2, aciertos_jugador2)
+        if gano_jugador2:
+            break
+
+if __name__ == "__main__":
+    main()
