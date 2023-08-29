@@ -1,5 +1,6 @@
 import random
 
+##Entropia##
 todas_las_preguntas = [
 
         {
@@ -176,6 +177,8 @@ todas_las_preguntas = [
 
 preguntas_utilizadas = []
 
+##Interrelacion
+
 def generar_preguntas():
     preguntas_disponibles = [pregunta for pregunta in todas_las_preguntas]
          
@@ -198,16 +201,18 @@ def jugar_turno(jugador, casilla, aciertos):
     print(f"Has sacado un {dado}")
     casilla += dado
 
-    if casilla >= 20:
-        print(f"¡El Jugador {jugador} ha ganado!")
-        return True, casilla, aciertos
+##Busqueda de objetivos
 
+    if casilla >= 20:
+        print(f"¡El Jugador {jugador} ha alcanzado la estrella!")
+        return True, casilla, aciertos
+##Diferenciacion_1
     pregunta = (generar_preguntas())
     print(pregunta["pregunta"])
     for opcion in pregunta["opciones"]:
         print(opcion)
     respuesta = input("Elige la opción correcta (a/b/c): ")
-
+##Diferenciacion_2
     if respuesta == pregunta["respuesta_correcta"]:
         print("¡Respuesta correcta!")
         aciertos += 1
@@ -227,6 +232,8 @@ def jugar_turno(jugador, casilla, aciertos):
     print(f"Jugador {jugador}: Estás en la casilla {casilla}, Aciertos: {aciertos}")
     return False, casilla, aciertos
 
+##Transformacion
+##Jerarquia
 def main():
     casilla_jugador1 = 1
     casilla_jugador2 = 1
